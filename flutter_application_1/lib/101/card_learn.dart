@@ -23,6 +23,7 @@ class CardLearn extends StatelessWidget {
 }
 
 class _CustomCard extends StatelessWidget {
+  // ignore: unused_element
   const _CustomCard({super.key, required this.child});
   final Widget child;
   @override
