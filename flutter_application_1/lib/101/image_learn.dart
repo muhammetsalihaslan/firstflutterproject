@@ -15,7 +15,7 @@ class ImageLearn extends StatelessWidget {
               child: Image.asset(
                 "assets/images.jpeg",
                 fit: BoxFit.fitHeight,
-              ))
+              )),
         ],
       ),
     );
