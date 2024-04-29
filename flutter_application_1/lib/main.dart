@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_application_1/101/stateless_learn.dart';
+import 'package:flutter_application_1/101/padding_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Salih',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData.dark().copyWith(
           appBarTheme: const AppBarTheme(
               centerTitle: true, backgroundColor: Colors.red, elevation: 0)),
-      home: const StatelessLearn(),
+      home: const PaddingLearn(),
     );
   }
 }
