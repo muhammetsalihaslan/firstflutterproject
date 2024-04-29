@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/101/app_bar.dart';
 
 class PaddingLearn extends StatelessWidget {
   const PaddingLearn({super.key});

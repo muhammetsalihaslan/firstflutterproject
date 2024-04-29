@@ -28,10 +28,11 @@ class _CustomCard extends StatelessWidget {
   final Widget child;
   @override
   Widget build(BuildContext context) {
-    return const Card(
-        margin: EdgeInsets.all(10),
-        color: Colors.white,
-        shape: StadiumBorder(),
-        child: child);
+    return Card(
+      margin: const EdgeInsets.all(10),
+      color: Colors.white,
+      shape: const StadiumBorder(),
+      child: child,
+    );
   }
 }

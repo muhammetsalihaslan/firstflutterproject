@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/101/image_learn.dart';
+import 'package:flutter_application_1/101/node_demos_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Salih',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-          appBarTheme: const AppBarTheme(
-              centerTitle: true, backgroundColor: Colors.red, elevation: 0)),
-      home: const ImageLearn(),
+      theme: ThemeData(
+          appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
+      home: const NoteDemos(),
     );
   }
 }
