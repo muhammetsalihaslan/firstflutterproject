@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/101/custom_widget_learn.dart';
+
+import 'package:flutter_application_1/101/indicator_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Salih',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+      theme: ThemeData.dark().copyWith(
+          progressIndicatorTheme:
+              const ProgressIndicatorThemeData(color: Colors.white),
           appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
-      home: const CustomWidgetLearn(),
+      home: const IndicatorLearn(),
     );
   }
 }
