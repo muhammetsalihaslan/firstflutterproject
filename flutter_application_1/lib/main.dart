@@ -27,4 +27,4 @@ class MyApp extends StatelessWidget {
 //MeterialApp içinde bulunan theme yeri klasörlere özel tehem ların yapılabileceği bir alandır 
 
 
-// Projede iki adet lib içinde dosya oluşturulur ve bu dosyalar product ve demos şeklinde adlandırılır Product içinde projeye özgü şeyler core içinde ise heryerde kullanılacak componentler yüklenir 
+// Projede iki adet lib içinde dosya oluşturulur ve bu dosyalar product ve demos şeklinde adlandırılır Product içinde projeye özgü şeyler core içinde ise heryerde kullanılacak componentler yüklenir yani mesela bir image componenti veya clasıda diyebiliriz bu heryerde kullanılabilecej-k türde birşeydir ama özel componentler Product içinde oluştururularak projeye yayılması gerekir
