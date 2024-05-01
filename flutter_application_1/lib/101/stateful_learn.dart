@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/product/counter_hello_button.dart';
+import 'package:flutter_application_1/product/textData/text_Data.dart';
 
 class StatefulLearn extends StatefulWidget {
   const StatefulLearn({super.key});
@@ -9,8 +11,6 @@ class StatefulLearn extends StatefulWidget {
 
 class _StatefulLearnState extends State<StatefulLearn> {
   int _countValue = 0;
-
-  int _counterCustom = 0;
 
   // void incrementValue() {
   //   setState(() {
@@ -37,7 +37,7 @@ class _StatefulLearnState extends State<StatefulLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: const Text(TextData.welcomeTitle)),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -51,13 +51,7 @@ class _StatefulLearnState extends State<StatefulLearn> {
               child: Text(_countValue.toString(),
                   style: Theme.of(context).textTheme.headlineLarge)),
           const Placeholder(),
-          ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  ++_counterCustom;
-                });
-              },
-              child: Text("Merhaba $_counterCustom"))
+          const CounterHelloButton(),
         ],
       ),
     );
@@ -86,4 +80,3 @@ class _StatefulLearnState extends State<StatefulLearn> {
 // ilk class stateless gibi çalışır ikincisi ise hayat gelişen alandır 
 
 
-//! 23.59 saniyede kalındı _counterCustom arttırldı duruldu
