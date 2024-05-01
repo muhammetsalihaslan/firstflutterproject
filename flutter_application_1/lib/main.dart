@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/101/statefull_life_cycle.dart';
+
+import 'package:flutter_application_1/101/text_field_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,18 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Salih',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-          listTileTheme:
-              const ListTileThemeData(contentPadding: EdgeInsets.zero),
-          progressIndicatorTheme:
-              const ProgressIndicatorThemeData(color: Colors.white),
-          appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
-      home: const LifeCycleLearn(
-        massage: "Salihhaaaplp",
-      ),
-    );
+        title: 'Flutter Salih',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+            listTileTheme:
+                const ListTileThemeData(contentPadding: EdgeInsets.zero),
+            progressIndicatorTheme:
+                const ProgressIndicatorThemeData(color: Colors.white),
+            appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
+        home: const TextFieldLearn());
   }
 }
 
