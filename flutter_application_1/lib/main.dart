@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/101/page_view_learn.dart';
+import 'package:flutter_application_1/101/statefull_life_cycle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white),
           appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
-      home: const PageViewLearn(),
+      home: const LifeCycleLearn(
+        massage: "Salihhaaaplp",
+      ),
     );
   }
 }
