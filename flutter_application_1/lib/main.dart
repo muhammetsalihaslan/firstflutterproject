@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/101/list_view_builder.dart';
-import 'package:flutter_application_1/101/list_view_learn.dart';
 
-import 'package:flutter_application_1/demos/color_life_cycle.dart';
+import 'package:flutter_application_1/101/navigation_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white),
           appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
-      home: const ListViewBuilderLearn(),
+      home: const NavigationLearn(),
     );
   }
 }
