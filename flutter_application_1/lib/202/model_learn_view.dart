@@ -9,6 +9,11 @@ class ModelLearnView extends StatefulWidget {
 
 class _ModelLearnViewState extends State<ModelLearnView> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container();
   }
