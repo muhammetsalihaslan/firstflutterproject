@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/202/service/post_model.dart';
@@ -10,8 +12,13 @@ class ServicePostLearn extends StatefulWidget {
 }
 
 class _ServicePostLearnState extends State<ServicePostLearn> {
+  String? name;
   late final Dio _dio;
   final _baseUrl = "https://jsonplaceholder.typicode.com/";
+
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _bodyController = TextEditingController();
+  final TextEditingController _userIdController = TextEditingController();
 
   @override
   void initState() {
@@ -19,22 +26,47 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
     _dio = Dio(BaseOptions(baseUrl: _baseUrl));
   }
 
+  Future<void> _addItemService(PostModel postModel) async {
+    final response = await _dio.post("post", data: postModel);
+
+    if (response.statusCode == HttpStatus.ok) {
+      name = 'Başarılı';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Column(
+      body: Column(
         children: [
           TextField(
-            decoration: InputDecoration(labelText: 'Title'),
+            controller: _titleController,
+            decoration: const InputDecoration(labelText: 'Title'),
           ),
           TextField(
-            decoration: InputDecoration(labelText: 'body'),
+            controller: _bodyController,
+            decoration: const InputDecoration(labelText: 'body'),
           ),
           TextField(
+            controller: _userIdController,
             keyboardType: TextInputType.number,
-            decoration: InputDecoration(labelText: 'UserId'),
+            decoration: const InputDecoration(labelText: 'UserId'),
           ),
+          TextButton(
+              onPressed: () {
+                if (_titleController.text.isNotEmpty &&
+                    _bodyController.text.isNotEmpty &&
+                    _userIdController.text.isNotEmpty) {
+                  final model = PostModel(
+                      body: _bodyController.text,
+                      title: _titleController.text,
+                      userId: int.tryParse(_userIdController.text));
+
+                  _addItemService(model);
+                }
+              },
+              child: const Text("Send")),
         ],
       ),
     );
