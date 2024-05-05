@@ -23,7 +23,7 @@ extension ImagePathsExtension on ImagePaths {
 
   Widget toWidget() {
     return Image.asset(path());
-  },
+  }
 }
 
 

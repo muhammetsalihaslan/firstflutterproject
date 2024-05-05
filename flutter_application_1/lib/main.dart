@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/202/image_learn_202.dart';
+import 'package:flutter_application_1/202/animated_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white),
           appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0)),
-      home: const ImageLearn202(),
+      home: const AnimatedLearn(),
     );
   }
 }
