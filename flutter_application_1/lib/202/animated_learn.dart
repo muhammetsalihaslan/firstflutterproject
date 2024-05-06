@@ -15,6 +15,3 @@ class _AnimatedLearnState extends State<AnimatedLearn> {
     );
   }
 }
-
-
-//! 11. video oop learn de kaldık 
