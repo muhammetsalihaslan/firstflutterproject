@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class CacheLearn extends StatefulWidget {
-  const CacheLearn({super.key});
+class SharedLearnView extends StatefulWidget {
+  const SharedLearnView({super.key});
 
   @override
-  State<CacheLearn> createState() => _CacheLearnState();
+  State<SharedLearnView> createState() => _SharedLearnViewState();
 }
 
-class _CacheLearnState extends State<CacheLearn> {
+class _SharedLearnViewState extends State<SharedLearnView> {
   int _currentValue = 0;
   void _onChangeValue(String value) {
-    final _value = int.tryParse(value);
-    if (_value != null) {
+    final value0 = int.tryParse(value);
+    if (value0 != null) {
       setState(() {
-        _currentValue = _value;
+        _currentValue = value0;
       });
     }
   }
@@ -21,7 +21,7 @@ class _CacheLearnState extends State<CacheLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(title: Text(_currentValue.toString())),
         body: TextField(
           onChanged: (value) {
             _onChangeValue(value);
@@ -29,3 +29,6 @@ class _CacheLearnState extends State<CacheLearn> {
         ));
   }
 }
+
+
+//! 18. dakikada kaldık sharedPreference öğrenildi ana kod içinde ekle ve remove et öğrenildi 
